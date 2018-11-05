@@ -1,0 +1,54 @@
+\hypertarget{namespacemorse__main}{}\section{morse\+\_\+main Namespace Reference}
+\label{namespacemorse__main}\index{morse\+\_\+main@{morse\+\_\+main}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemorse__main_a76d936650259b2059dd69cfe7a501ff8}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Main module for command line based morse conversion. Input and output are text files.
+   File names and conversion direction are asked from user with command prompt.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemorse__main_a76d936650259b2059dd69cfe7a501ff8}\label{namespacemorse__main_a76d936650259b2059dd69cfe7a501ff8}} 
+\index{morse\+\_\+main@{morse\+\_\+main}!main@{main}}
+\index{main@{main}!morse\+\_\+main@{morse\+\_\+main}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def morse\+\_\+main.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Main function for command line based morse string converter.
+\end{DoxyVerb}
+ 
+
+Definition at line 8 of file morse\+\_\+main.\+py.
+
+
+\begin{DoxyCode}
+8 \textcolor{keyword}{def }\mbox{\hyperlink{namespacemorse__main_a76d936650259b2059dd69cfe7a501ff8}{main}}():
+9     \textcolor{stringliteral}{"""Main function for command line based morse string converter.}
+10 \textcolor{stringliteral}{    """}
+11     \_f = \mbox{\hyperlink{namespacefile}{file}}()
+12     \_m = \mbox{\hyperlink{namespacemorse__conversion}{morse\_conversion}}()
+13     \textcolor{comment}{# m.print\_all()}
+14 
+15     mode, src\_file, target\_file = get\_cmd\_line\_input()
+16     \textcolor{keywordflow}{if} mode == \textcolor{stringliteral}{"print"}:
+17         \_m.print\_all()
+18         exit(0)
+19 
+20     input\_content = \_f.read(src\_file)
+21 
+22     \textcolor{comment}{# Make morse coding}
+23     \textcolor{keywordflow}{if} mode == \textcolor{stringliteral}{'text\_input'}: \textcolor{comment}{# Make morse coding from text}
+24         output\_content = \_m.convert\_text\_to\_morse(input\_content)
+25     \textcolor{keywordflow}{else}:  \textcolor{comment}{# Make text from morse code}
+26         output\_content = \_m.convert\_morse\_to\_text(input\_content)
+27 
+28     \textcolor{comment}{# Write to output file}
+29     \_f.write(target\_file, output\_content)
+30 
+\end{DoxyCode}

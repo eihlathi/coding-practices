@@ -1,0 +1,180 @@
+\hypertarget{classmorse__conversion_1_1morse__conversion}{}\section{morse\+\_\+conversion.\+morse\+\_\+conversion Class Reference}
+\label{classmorse__conversion_1_1morse__conversion}\index{morse\+\_\+conversion.\+morse\+\_\+conversion@{morse\+\_\+conversion.\+morse\+\_\+conversion}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_a590bac0d36848811591a35b4bd4ec25a}\label{classmorse__conversion_1_1morse__conversion_a590bac0d36848811591a35b4bd4ec25a}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classmorse__conversion_1_1morse__conversion_acb139db386ca7b823adc40921c9f70bc}{print\+\_\+all}} (self)
+\item 
+def \mbox{\hyperlink{classmorse__conversion_1_1morse__conversion_a47073274e46c3a138d46f0163a413582}{get\+\_\+morse\+\_\+str}} (self, input)
+\item 
+def \mbox{\hyperlink{classmorse__conversion_1_1morse__conversion_abd07297a2f20d9c74a9b5c15f37fbe4f}{get\+\_\+text\+\_\+char}} (self, input)
+\item 
+def \mbox{\hyperlink{classmorse__conversion_1_1morse__conversion_a9c761654a08464e7308dc721adb946fb}{convert\+\_\+text\+\_\+to\+\_\+morse}} (self, input\+\_\+content)
+\item 
+def \mbox{\hyperlink{classmorse__conversion_1_1morse__conversion_a541fbc681012d7974aba16a1a1460bc2}{convert\+\_\+morse\+\_\+to\+\_\+text}} (self, input\+\_\+content)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary {\bfseries table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 1 of file morse\+\_\+conversion.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_a541fbc681012d7974aba16a1a1460bc2}\label{classmorse__conversion_1_1morse__conversion_a541fbc681012d7974aba16a1a1460bc2}} 
+\index{morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}!convert\+\_\+morse\+\_\+to\+\_\+text@{convert\+\_\+morse\+\_\+to\+\_\+text}}
+\index{convert\+\_\+morse\+\_\+to\+\_\+text@{convert\+\_\+morse\+\_\+to\+\_\+text}!morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}}
+\subsubsection{\texorpdfstring{convert\+\_\+morse\+\_\+to\+\_\+text()}{convert\_morse\_to\_text()}}
+{\footnotesize\ttfamily def morse\+\_\+conversion.\+morse\+\_\+conversion.\+convert\+\_\+morse\+\_\+to\+\_\+text (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+content }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts given morse code to text and returns it\end{DoxyVerb}
+ 
+
+Definition at line 58 of file morse\+\_\+conversion.\+py.
+
+
+\begin{DoxyCode}
+58     \textcolor{keyword}{def }convert\_morse\_to\_text(self, input\_content):
+59         \textcolor{stringliteral}{"""Converts given morse code to text and returns it"""}
+60         output\_content = \textcolor{stringliteral}{""}
+61         input\_morse = input\_content.split(self.conf.morse\_char\_separator) \textcolor{comment}{#add as common separator}
+62         \textcolor{keywordflow}{for} morse\_str \textcolor{keywordflow}{in} input\_morse:
+63             output\_str = self.get\_text\_char(morse\_str)
+64             \textcolor{keywordflow}{if} output\_str == \textcolor{stringliteral}{"ILLEGAL\_MORSE\_STR"}:
+65                 \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Illegal morse string"}
+66             \textcolor{keywordflow}{else}:
+67                 output\_content = output\_content + output\_str
+68         \textcolor{keywordflow}{return} output\_content
+69 \end{DoxyCode}
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_a9c761654a08464e7308dc721adb946fb}\label{classmorse__conversion_1_1morse__conversion_a9c761654a08464e7308dc721adb946fb}} 
+\index{morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}!convert\+\_\+text\+\_\+to\+\_\+morse@{convert\+\_\+text\+\_\+to\+\_\+morse}}
+\index{convert\+\_\+text\+\_\+to\+\_\+morse@{convert\+\_\+text\+\_\+to\+\_\+morse}!morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}}
+\subsubsection{\texorpdfstring{convert\+\_\+text\+\_\+to\+\_\+morse()}{convert\_text\_to\_morse()}}
+{\footnotesize\ttfamily def morse\+\_\+conversion.\+morse\+\_\+conversion.\+convert\+\_\+text\+\_\+to\+\_\+morse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input\+\_\+content }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts given text to morse code and returns it\end{DoxyVerb}
+ 
+
+Definition at line 49 of file morse\+\_\+conversion.\+py.
+
+
+\begin{DoxyCode}
+49     \textcolor{keyword}{def }convert\_text\_to\_morse(self, input\_content):
+50         \textcolor{stringliteral}{"""Converts given text to morse code and returns it"""}
+51         output\_content = \textcolor{stringliteral}{""}
+52         \textcolor{keywordflow}{for} text\_ch \textcolor{keywordflow}{in} input\_content:
+53             output\_str = self.get\_morse\_str(text\_ch)
+54             \textcolor{keywordflow}{if} output\_str != \textcolor{stringliteral}{"ILLEGAL\_CHAR"}:
+55                 output\_content = output\_content + output\_str + self.conf.morse\_char\_separator
+56         \textcolor{keywordflow}{return} output\_content[:-1]  \textcolor{comment}{# take last comma away}
+57 
+\end{DoxyCode}
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_a47073274e46c3a138d46f0163a413582}\label{classmorse__conversion_1_1morse__conversion_a47073274e46c3a138d46f0163a413582}} 
+\index{morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}!get\+\_\+morse\+\_\+str@{get\+\_\+morse\+\_\+str}}
+\index{get\+\_\+morse\+\_\+str@{get\+\_\+morse\+\_\+str}!morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}}
+\subsubsection{\texorpdfstring{get\+\_\+morse\+\_\+str()}{get\_morse\_str()}}
+{\footnotesize\ttfamily def morse\+\_\+conversion.\+morse\+\_\+conversion.\+get\+\_\+morse\+\_\+str (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets text char as input and returns morse char string from table\end{DoxyVerb}
+ 
+
+Definition at line 29 of file morse\+\_\+conversion.\+py.
+
+
+\begin{DoxyCode}
+29     \textcolor{keyword}{def }get\_morse\_str(self, input):
+30         \textcolor{stringliteral}{"""Gets text char as input and returns morse char string from table"""}
+31         \textcolor{keywordflow}{for} \_c, \_m \textcolor{keywordflow}{in} self.table.items():
+32             \textcolor{keywordflow}{if} input.upper() == \_c:
+33                 \textcolor{comment}{#print "found char %s" %\_c}
+34                 \textcolor{keywordflow}{return} \_m
+35         \textcolor{keywordflow}{if} input == \textcolor{stringliteral}{'\(\backslash\)n'}:
+36             input = \textcolor{stringliteral}{"NEW\_LINE"}
+37         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"ERROR: char '%s' not found from morse table, ignoring it"} % input
+38         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"ILLEGAL\_CHAR"}
+39 
+\end{DoxyCode}
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_abd07297a2f20d9c74a9b5c15f37fbe4f}\label{classmorse__conversion_1_1morse__conversion_abd07297a2f20d9c74a9b5c15f37fbe4f}} 
+\index{morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}!get\+\_\+text\+\_\+char@{get\+\_\+text\+\_\+char}}
+\index{get\+\_\+text\+\_\+char@{get\+\_\+text\+\_\+char}!morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}}
+\subsubsection{\texorpdfstring{get\+\_\+text\+\_\+char()}{get\_text\_char()}}
+{\footnotesize\ttfamily def morse\+\_\+conversion.\+morse\+\_\+conversion.\+get\+\_\+text\+\_\+char (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets morse char string as input and returns text char from table\end{DoxyVerb}
+ 
+
+Definition at line 40 of file morse\+\_\+conversion.\+py.
+
+
+\begin{DoxyCode}
+40     \textcolor{keyword}{def }get\_text\_char(self, input):
+41         \textcolor{stringliteral}{"""Gets morse char string as input and returns text char from table"""}
+42         \textcolor{keywordflow}{for} \_c, \_m \textcolor{keywordflow}{in} self.table.items():
+43             \textcolor{keywordflow}{if} input == \_m:
+44                 \textcolor{keywordflow}{print} \textcolor{stringliteral}{"found morse string"}
+45                 \textcolor{keywordflow}{return} \_c
+46         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"ERROR: string '%s' not found from morse table, ignoring it"} % input
+47         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"ILLEGAL\_MORSE\_STR"}
+48 
+\end{DoxyCode}
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_acb139db386ca7b823adc40921c9f70bc}\label{classmorse__conversion_1_1morse__conversion_acb139db386ca7b823adc40921c9f70bc}} 
+\index{morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}!print\+\_\+all@{print\+\_\+all}}
+\index{print\+\_\+all@{print\+\_\+all}!morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}}
+\subsubsection{\texorpdfstring{print\+\_\+all()}{print\_all()}}
+{\footnotesize\ttfamily def morse\+\_\+conversion.\+morse\+\_\+conversion.\+print\+\_\+all (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints morse table\end{DoxyVerb}
+ 
+
+Definition at line 23 of file morse\+\_\+conversion.\+py.
+
+
+\begin{DoxyCode}
+23     \textcolor{keyword}{def }print\_all(self):
+24         \textcolor{stringliteral}{"""Prints morse table"""}
+25         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"\(\backslash\)nMorse table:\(\backslash\)n"}
+26         \textcolor{keywordflow}{for} \_c, \_m \textcolor{keywordflow}{in} self.table.items():
+27             \textcolor{keywordflow}{print} \_c + \textcolor{stringliteral}{" "} + \_m;
+28 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmorse__conversion_1_1morse__conversion_a00d5a194d53f39ec2dc0a7afe4b35572}\label{classmorse__conversion_1_1morse__conversion_a00d5a194d53f39ec2dc0a7afe4b35572}} 
+\index{morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}!table@{table}}
+\index{table@{table}!morse\+\_\+conversion\+::morse\+\_\+conversion@{morse\+\_\+conversion\+::morse\+\_\+conversion}}
+\subsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily dictionary morse\+\_\+conversion.\+morse\+\_\+conversion.\+table\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  \{\textcolor{stringliteral}{' '}: conf.morse\_word\_separator,
+             \textcolor{stringliteral}{'A'}: \textcolor{stringliteral}{'.-'}, \textcolor{stringliteral}{'B'}: \textcolor{stringliteral}{'-...'}, \textcolor{stringliteral}{'C'}: \textcolor{stringliteral}{'-.-.'}, \textcolor{stringliteral}{'D'}: \textcolor{stringliteral}{'-..'}, \textcolor{stringliteral}{'E'}: \textcolor{stringliteral}{'.'}, \textcolor{stringliteral}{'F'}: \textcolor{stringliteral}{'..-.'},
+             \textcolor{stringliteral}{'G'}: \textcolor{stringliteral}{'--.'}, \textcolor{stringliteral}{'H'}: \textcolor{stringliteral}{'....'}, \textcolor{stringliteral}{'I'}: \textcolor{stringliteral}{'..'}, \textcolor{stringliteral}{'J'}: \textcolor{stringliteral}{'.---'}, \textcolor{stringliteral}{'K'}: \textcolor{stringliteral}{'-.-'}, \textcolor{stringliteral}{'L'}: \textcolor{stringliteral}{'.-..'},
+             \textcolor{stringliteral}{'M'}: \textcolor{stringliteral}{'--'}, \textcolor{stringliteral}{'N'}: \textcolor{stringliteral}{'-.'}, \textcolor{stringliteral}{'O'}: \textcolor{stringliteral}{'---'}, \textcolor{stringliteral}{'P'}: \textcolor{stringliteral}{'.--.'}, \textcolor{stringliteral}{'Q'}: \textcolor{stringliteral}{'--.-'}, \textcolor{stringliteral}{'R': '}.-.',
+             \textcolor{stringliteral}{'S'}: \textcolor{stringliteral}{'...'}, \textcolor{stringliteral}{'T'}: \textcolor{stringliteral}{'-'}, \textcolor{stringliteral}{'U': '}..-', 'V': '...-', 'W': '.--', 'X': '-..-',
+             \textcolor{stringliteral}{'Y'}: \textcolor{stringliteral}{'-.--'}, \textcolor{stringliteral}{'Z'}: \textcolor{stringliteral}{'--..'}, \textcolor{stringliteral}{'.'}: \textcolor{stringliteral}{'.-.-.-'}, \textcolor{stringliteral}{','}: \textcolor{stringliteral}{'--..--'}, \textcolor{stringliteral}{'?'}: \textcolor{stringliteral}{'..--..'},
+             \textcolor{stringliteral}{'/'}: \textcolor{stringliteral}{'-..-.'}, \textcolor{stringliteral}{'@'}: \textcolor{stringliteral}{'.--.-.'},
+             \textcolor{stringliteral}{'0'}: \textcolor{stringliteral}{'-----'}, \textcolor{stringliteral}{'1'}: \textcolor{stringliteral}{'.----'}, \textcolor{stringliteral}{'2'}: \textcolor{stringliteral}{'..---'}, \textcolor{stringliteral}{'3'}: \textcolor{stringliteral}{'...--'}, \textcolor{stringliteral}{'4'}: \textcolor{stringliteral}{'....-'},
+             \textcolor{stringliteral}{'5'}: \textcolor{stringliteral}{'.....'}, \textcolor{stringliteral}{'6'}: \textcolor{stringliteral}{'-....'}, \textcolor{stringliteral}{'7'}: \textcolor{stringliteral}{'--...'}, \textcolor{stringliteral}{'8'}: \textcolor{stringliteral}{'---..'}, \textcolor{stringliteral}{'9'}: \textcolor{stringliteral}{'----.'}
+             \}
+\end{DoxyCode}
+
+
+Definition at line 9 of file morse\+\_\+conversion.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+morse\+\_\+conversion.\+py\end{DoxyCompactItemize}
