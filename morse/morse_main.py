@@ -4,6 +4,7 @@
 from morse_conversion import morse_conversion
 from file import file
 from cmd_line_input import get_cmd_line_input
+#from user_input import get_user_input
 
 def main():
     """Main function for command line based morse string converter.
@@ -13,6 +14,7 @@ def main():
     # m.print_all()
 
     mode, src_file, target_file = get_cmd_line_input()
+    #mode, src_file, target_file = get_user_input()
     if mode == "print":
         _m.print_all()
         exit(0)
