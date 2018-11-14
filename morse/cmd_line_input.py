@@ -5,13 +5,13 @@ import sys
 
 
 def get_cmd_line_input():
-    # from file import file
+    """Function gets input from command line parameters."""
     _f = file()
 
     p = optparse.OptionParser(description="This script converts english to morse code OR morse to english.\n" \
                                           "It reads input from file and writes output to file.\n" \
                                           "Files and scripts must be in same folder.\n" \
-                                          "File names and direction of conversion is asked from user.\n" \
+                                          "File names and direction of conversion are feeded by command line arguments.\n" \
                                           "Or if just wanted to print morse table.")
 
     p.add_option('-m', '--mode', action='store', type='string', dest='_mode', default='M',
