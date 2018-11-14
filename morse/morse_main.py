@@ -21,6 +21,7 @@ def main():
         _m.print_all()
         exit(0)
 
+    #read input from file
     input_content = _f.read(src_file)
 
     # Make morse coding
