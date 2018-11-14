@@ -78,20 +78,114 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab090d9bd0278f849d11195aa51738e4e"><td class="memItemLeft" align="right" valign="top"><a id="ab090d9bd0278f849d11195aa51738e4e"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self)</td></tr>
 <tr class="separator:ab090d9bd0278f849d11195aa51738e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aba188fd5ba1be0a573f19916a13315"><td class="memItemLeft" align="right" valign="top"><a id="a6aba188fd5ba1be0a573f19916a13315"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> (self, file_name)</td></tr>
+<tr class="memitem:a6aba188fd5ba1be0a573f19916a13315"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfile_1_1file.html#a6aba188fd5ba1be0a573f19916a13315">exists</a> (self, file_name)</td></tr>
 <tr class="separator:a6aba188fd5ba1be0a573f19916a13315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a410aad2827c9bf0277194525bce39278"><td class="memItemLeft" align="right" valign="top"><a id="a410aad2827c9bf0277194525bce39278"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (self, src_file)</td></tr>
+<tr class="memitem:a410aad2827c9bf0277194525bce39278"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfile_1_1file.html#a410aad2827c9bf0277194525bce39278">read</a> (self, src_file)</td></tr>
 <tr class="separator:a410aad2827c9bf0277194525bce39278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0444bd1572b6700fe4fd4f9b579a620"><td class="memItemLeft" align="right" valign="top"><a id="af0444bd1572b6700fe4fd4f9b579a620"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (self, target_file, output_content)</td></tr>
+<tr class="memitem:af0444bd1572b6700fe4fd4f9b579a620"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfile_1_1file.html#af0444bd1572b6700fe4fd4f9b579a620">write</a> (self, target_file, output_content)</td></tr>
 <tr class="separator:af0444bd1572b6700fe4fd4f9b579a620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><pre class="fragment">Class for file handling</pre> 
 <p class="definition">Definition at line <a class="el" href="file_8py_source.html#l00001">1</a> of file <a class="el" href="file_8py_source.html">file.py</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6aba188fd5ba1be0a573f19916a13315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aba188fd5ba1be0a573f19916a13315">&#9670;&nbsp;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def file.file.exists </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Function checks if given file exists.</pre> 
+<p class="definition">Definition at line <a class="el" href="file_8py_source.html#l00008">8</a> of file <a class="el" href="file_8py_source.html">file.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">def </span>exists(self, file_name):</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Function checks if given file exists.&quot;&quot;&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordflow">return</span> self.os.path.isfile(file_name)</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a410aad2827c9bf0277194525bce39278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410aad2827c9bf0277194525bce39278">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def file.file.read </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>src_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Function reads given file and returns it's content.</pre> 
+<p class="definition">Definition at line <a class="el" href="file_8py_source.html#l00012">12</a> of file <a class="el" href="file_8py_source.html">file.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">def </span>read(self, src_file):</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Function reads given file and returns it&#39;s content.&quot;&quot;&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        with open(src_file, <span class="stringliteral">&#39;r&#39;) as f_input:</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">            input_content = f_input.read()</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">            f_input.close()</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">        </span><span class="keywordflow">return</span> input_content</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div></div><!-- fragment -->
+</div>
+</div>
+<a id="af0444bd1572b6700fe4fd4f9b579a620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0444bd1572b6700fe4fd4f9b579a620">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def file.file.write </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>target_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>output_content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Function reads string and writes it to given file.</pre> 
+<p class="definition">Definition at line <a class="el" href="file_8py_source.html#l00019">19</a> of file <a class="el" href="file_8py_source.html">file.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">def </span>write(self, target_file, output_content):</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Function reads string and writes it to given file.&quot;&quot;&quot;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        with open(target_file, <span class="stringliteral">&#39;w+&#39;</span>) <span class="keyword">as</span> f_output:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            f_output.write(output_content)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            f_output.close()</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="file_8py_source.html">file.py</a></li>
 </ul>
 </div><!-- contents -->

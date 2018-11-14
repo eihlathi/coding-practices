@@ -6,22 +6,81 @@
 \mbox{\Hypertarget{classfile_1_1file_ab090d9bd0278f849d11195aa51738e4e}\label{classfile_1_1file_ab090d9bd0278f849d11195aa51738e4e}} 
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
 \item 
-\mbox{\Hypertarget{classfile_1_1file_a6aba188fd5ba1be0a573f19916a13315}\label{classfile_1_1file_a6aba188fd5ba1be0a573f19916a13315}} 
-def {\bfseries exists} (self, file\+\_\+name)
+def \mbox{\hyperlink{classfile_1_1file_a6aba188fd5ba1be0a573f19916a13315}{exists}} (self, file\+\_\+name)
 \item 
-\mbox{\Hypertarget{classfile_1_1file_a410aad2827c9bf0277194525bce39278}\label{classfile_1_1file_a410aad2827c9bf0277194525bce39278}} 
-def {\bfseries read} (self, src\+\_\+file)
+def \mbox{\hyperlink{classfile_1_1file_a410aad2827c9bf0277194525bce39278}{read}} (self, src\+\_\+file)
 \item 
-\mbox{\Hypertarget{classfile_1_1file_af0444bd1572b6700fe4fd4f9b579a620}\label{classfile_1_1file_af0444bd1572b6700fe4fd4f9b579a620}} 
-def {\bfseries write} (self, target\+\_\+file, output\+\_\+content)
+def \mbox{\hyperlink{classfile_1_1file_af0444bd1572b6700fe4fd4f9b579a620}{write}} (self, target\+\_\+file, output\+\_\+content)
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-
+\begin{DoxyVerb}Class for file handling\end{DoxyVerb}
+ 
 
 Definition at line 1 of file file.\+py.
 
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfile_1_1file_a6aba188fd5ba1be0a573f19916a13315}\label{classfile_1_1file_a6aba188fd5ba1be0a573f19916a13315}} 
+\index{file\+::file@{file\+::file}!exists@{exists}}
+\index{exists@{exists}!file\+::file@{file\+::file}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily def file.\+file.\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function checks if given file exists.\end{DoxyVerb}
+ 
+
+Definition at line 8 of file file.\+py.
+
+
+\begin{DoxyCode}
+8     \textcolor{keyword}{def }exists(self, file\_name):
+9         \textcolor{stringliteral}{"""Function checks if given file exists."""}
+10         \textcolor{keywordflow}{return} self.os.path.isfile(file\_name)
+11 
+\end{DoxyCode}
+\mbox{\Hypertarget{classfile_1_1file_a410aad2827c9bf0277194525bce39278}\label{classfile_1_1file_a410aad2827c9bf0277194525bce39278}} 
+\index{file\+::file@{file\+::file}!read@{read}}
+\index{read@{read}!file\+::file@{file\+::file}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def file.\+file.\+read (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src\+\_\+file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function reads given file and returns it's content.\end{DoxyVerb}
+ 
+
+Definition at line 12 of file file.\+py.
+
+
+\begin{DoxyCode}
+12     \textcolor{keyword}{def }read(self, src\_file):
+13         \textcolor{stringliteral}{"""Function reads given file and returns it's content."""}
+14         with open(src\_file, \textcolor{stringliteral}{'r') as f\_input:}
+15 \textcolor{stringliteral}{            input\_content = f\_input.read()}
+16 \textcolor{stringliteral}{            f\_input.close()}
+17 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} input\_content
+18 
+\end{DoxyCode}
+\mbox{\Hypertarget{classfile_1_1file_af0444bd1572b6700fe4fd4f9b579a620}\label{classfile_1_1file_af0444bd1572b6700fe4fd4f9b579a620}} 
+\index{file\+::file@{file\+::file}!write@{write}}
+\index{write@{write}!file\+::file@{file\+::file}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def file.\+file.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{target\+\_\+file,  }\item[{}]{output\+\_\+content }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function reads string and writes it to given file.\end{DoxyVerb}
+ 
+
+Definition at line 19 of file file.\+py.
+
+
+\begin{DoxyCode}
+19     \textcolor{keyword}{def }write(self, target\_file, output\_content):
+20         \textcolor{stringliteral}{"""Function reads string and writes it to given file."""}
+21         with open(target\_file, \textcolor{stringliteral}{'w+'}) \textcolor{keyword}{as} f\_output:
+22             f\_output.write(output\_content)
+23             f\_output.close()
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

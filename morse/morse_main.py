@@ -1,5 +1,7 @@
-"""Main module for command line based morse conversion. Input and output are text files.
+"""Main module for morse conversion. Input and output are text files.
    File names and conversion direction are asked from user with command prompt.
+   Default way is to use command line as input (can be used in automation).
+   Another way (commented out now) is prompted user input.
 """
 from morse_conversion import morse_conversion
 from file import file
