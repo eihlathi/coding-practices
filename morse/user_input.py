@@ -1,8 +1,8 @@
-#get_user_input function gets input from user with raw_input.
 from file import file
 from common import exit_with_error_msg
 
 def get_user_input():
+   """Function gets input from user with raw_input."""
 
     #from file import file
     _f = file()

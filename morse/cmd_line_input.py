@@ -34,7 +34,7 @@ def get_cmd_line_input():
     target_file = options.target_file
 
     if mode == 'P':
-        print "mode P"
+        print("mode P")
         return "print", "", ""
     elif mode == 'E':
         mode = 'text_input'
