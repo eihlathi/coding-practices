@@ -1,8 +1,8 @@
-#MORSE CODE CONVERTER
+# MORSE CODE CONVERTER
 
 These python scripts make morse conversion from text to morse or vice versa. Input is read from fíle and output printed to another.
 
-##Implementation
+## Implementation
 
 In morse table space is used as separator between characters and '/' betweeen words.
 
@@ -12,7 +12,7 @@ Main module is for current command line and file spesified implementation. Varia
 
 Doxygen documentation can be generated with attached configuration file. However all wanted code is not coming to documentation. Documentation is not included. 
 
-##Usage
+## Usage
 
 Put wanted text to input file. Run script:
 >python morse_main.py
@@ -28,7 +28,7 @@ Give input file name:  ace_of_spades.txt
 Give output file name: aos_morse.txt
 Check output file content.
 
-##Testing
+## Testing
 
 Basically testing is done manually, defining input in output file, running script, checking possible error prints (mostly there is told not supported chars, but sometimes some fatal error) and output file. Converting back and checking against original file can be done to see if contents are the same.
 
