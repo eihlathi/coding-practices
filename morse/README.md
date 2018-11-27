@@ -15,17 +15,20 @@ Doxygen documentation can be generated with attached configuration file. However
 ## Usage
 
 Put wanted text to input file. Run script:
->python morse_main.py
+```
+python morse_main.py
+
 This script converts english to morse code OR morse to english.
 It reads input from file and writes output to file. Files and scripts must be in same folder.
 File names and direction of conversion is asked from user. Or if just wanted to print morse table.
 
-Give action: 'P'/'p': print morse table 
+Give action: 'P'/'p': print morse table
 'E'/'e': convert english -> morse code,
 anything else: convert morse code->english
 e
 Give input file name:  ace_of_spades.txt
-Give output file name: aos_morse.txt
+Give output file name: aos_morse.txt```
+```
 Check output file content.
 
 ## Testing
