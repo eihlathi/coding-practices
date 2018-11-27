@@ -46,7 +46,7 @@ Give action: 'P'/'p': print morse table
 anything else: convert morse code->english
 e
 Give input file name:  ace_of_spades.txt
-Give output file name: aos_morse.txt```
+Give output file name: aos_morse.txt
 ```
 
 ## Testing
