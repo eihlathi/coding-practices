@@ -14,7 +14,26 @@ Doxygen documentation can be generated with attached configuration file. However
 
 ## Usage
 
-Put wanted text to input file. Run script:
+### Default, command line
+
+Help:
+```
+python morse_main.py -h
+```
+Put wanted text to input file. Run script to convert it to morse (e = english but can use also other lanquages with utf-8 characters):
+```
+python morse_main.py -m e -i C:\Tests\ace_of_spades.txt -t C:\Tests\morse.txt
+```
+
+Run script to convert it to morse file to text:
+```
+python morse_main.py -m m -i C:\Tests\morse.txt -t C:\Tests\text.txt
+```
+Check output file content.
+
+### Optional, user input
+
+Uncomment in morse_main.py user_input() function in use. Run:
 ```
 python morse_main.py
 
@@ -29,7 +48,6 @@ e
 Give input file name:  ace_of_spades.txt
 Give output file name: aos_morse.txt```
 ```
-Check output file content.
 
 ## Testing
 
